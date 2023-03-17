@@ -231,11 +231,12 @@ const Register: React.FC = () => {
                 })}
                 rules={[
                   {
+                    min:8,
                     required: true,
                     message: (
                       <FormattedMessage
                         id="pages.Register.password.required"
-                        defaultMessage="请输入密码！"
+                        defaultMessage="密码小于8位！"
                       />
                     ),
                   },
@@ -253,11 +254,12 @@ const Register: React.FC = () => {
                 })}
                 rules={[
                   {
+                    min:8,
                     required: true,
                     message: (
                       <FormattedMessage
                         id="pages.Register.password.required"
-                        defaultMessage="请输入密码！"
+                        defaultMessage="密码小于8位"
                       />
                     ),
                   },

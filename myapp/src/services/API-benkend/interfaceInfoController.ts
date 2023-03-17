@@ -62,13 +62,13 @@ export async function getInterfaceInfoVOByIdUsingGET(
   });
 }
 
-/** listInterfaceInfoVOByPage POST /api/InterfaceInfo/list/page/vo */
-export async function listInterfaceInfoVOByPageUsingPOST(
+/** listInterfaceInfoVOByPage GET /api/InterfaceInfo/list/page/vo */
+export async function listInterfaceInfoVOByPageUsingGET(
   body: API.InterfaceInfoQueryRequest,
   options?: { [key: string]: any },
 ) {
   return request<API.BaseResponsePageInterfaceInfoVo_>('/api/InterfaceInfo/list/page/vo', {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },

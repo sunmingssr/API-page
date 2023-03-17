@@ -23,6 +23,7 @@ import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
 import {userLoginUsingPOST} from "@/services/API-benkend/userController";
 import {loginUser} from "@/services/swagger/user";
+import {Link} from "umi";
 
 const ActionIcons = () => {
   const langClassName = useEmotionCss(({ token }) => {
@@ -260,12 +261,14 @@ const Login: React.FC = () => {
             <ProFormCheckbox noStyle name="autoLogin">
               <FormattedMessage id="pages.login.rememberMe" defaultMessage="自动登录" />
             </ProFormCheckbox>
+
             <a
               style={{
                 float: 'right',
               }}
             >
-              <FormattedMessage id="pages.login.forgotPassword" defaultMessage="忘记密码" />
+              <Link to="/user/register">新用户注册</Link>
+
             </a>
           </div>
         </LoginForm>
